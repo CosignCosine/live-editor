@@ -116,14 +116,6 @@ window.LiveEditor = Backbone.View.extend({
             }.bind(this)
         });
 
-        // TEMP: Set up a query param for testing the new error experience
-        // Looks to see if "new_error_experience=yes" is in the url,
-        //  if it is, then we use the new error buddy behaviour.
-        this.newErrorExperience = options.newErrorExperience;
-        if (window.location.search.indexOf("new_error_experience=yes") !== -1) {
-            this.newErrorExperience = true;
-        }
-
         if (options.enableLoopProtect != null) {
             this.enableLoopProtect = options.enableLoopProtect;
         } else {
